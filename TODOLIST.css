@@ -1,0 +1,177 @@
+/* Reset dasar & font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5e44de;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ubah ke flex-start */
+    min-height: 100vh;
+    padding-top: 50px; /* Beri jarak dari atas */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px; /* Sedikit lebih lebar */
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #444;
+    margin-top: 0;
+}
+
+/* Styling formulir */
+#todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1; 
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+#todo-form button {
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #5e44de;
+   
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#todo-form button:hover {
+        background-color: #5e44de;
+
+}
+
+/* Styling Tombol Filter */
+.filter-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-buttons button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    color: #555;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-buttons button:hover {
+    background: #f0f0f0;
+}
+
+.filter-buttons button.active {
+    background: #5e44de;
+    color: white;
+    border-color: #4302ac;
+}
+
+
+/* Styling Daftar Tugas (List) */
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo-list li {
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    display: flex; /* WAJIB untuk layout */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar rapi di layar kecil */
+    border-radius: 4px;
+}
+
+/* Konten (Teks + Tanggal) */
+.task-content {
+    display: flex;
+    flex-direction: column; /* Teks di atas tanggal */
+    flex-grow: 1; /* Ambil sisa ruang */
+    padding-right: 10px;
+}
+
+.task-text {
+    font-size: 16px;
+    color: #333;
+    /* Mencegah teks overlap dengan tombol */
+    word-break: break-word; 
+}
+
+.task-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Kontrol (Tombol Edit + Hapus) */
+.task-controls {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Mencegah tombol turun baris */
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 5px;
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #333;
+}
+.edit-btn:hover {
+    background: #e0a800;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+}
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+
+/* Style untuk tugas yang 'Selesai' */
+#todo-list li.completed {
+    background: #f0f0f0;
+}
+
+#todo-list li.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+#todo-list li.completed .task-date {
+    color: #bbb;
+}

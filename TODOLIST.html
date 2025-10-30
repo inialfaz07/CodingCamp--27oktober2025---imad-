@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Lengkap</title>
+    <link rel="stylesheet" href="/CSS/TODOLIST.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Daftar Tugasku</h1>
+        </header>
+        
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Tambahkan tugas baru..." required>
+            <button type="submit">Tambah</button>
+        </form>
+        
+        <div class="filter-buttons">
+            <button data-filter="all" class="active">Semua</button>
+            <button data-filter="active">Aktif</button>
+            <button data-filter="completed">Selesai</button>
+        </div>
+        
+        <ul id="todo-list">
+            </ul>
+    </div>
+
+    <script src="/JAVASCRIPT/TODOLIST.js"></script>
+</body>
+</html>
